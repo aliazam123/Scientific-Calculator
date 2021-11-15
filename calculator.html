@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Scientific Calculator using HTML CSS and JS
+    </title>
+    <style>
+       /* .title {
+                margin-bottom: 0px;
+                padding: 10px 10px;
+                margin-top: -454px;
+                font-size: 25px;
+                font-weight: bold;
+                text-align: center;
+                width: 600px;
+                color: blue;
+                border: solid black 5px;
+             }
+            */ 
+        body {
+            font-family: sans-serif;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            height: 100vh;
+            background-color: #00ceff;
+
+        }
+
+        .for {
+            box-shadow:
+                0em 1.2em 1.2em rgba(0, 0, 0, 0.3),
+                inset 03m 1.2em 1.2em rgba(0, 0, 0, 0.3);
+        }
+
+        .center {
+            background: #ff9b00;
+            border-radius: 0px;
+            width: 350px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 0px;
+        }
+
+        input[type="text"] {
+            height: 60px;
+            width: 276px;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            border-radius: 0px;
+        }
+
+        input[type="button"] {
+            width: 55px;
+            height: 50px;
+            margin: 5px;
+            font-size: 22px;
+            line-height: 55px;
+            border-radius: 5px;
+            border: 1px solid #d9d9d9;
+
+        }
+
+        input#clear {
+            background: aqua;
+            color: black;
+        }
+
+        input#equal {
+            width: 230px;
+            margin: 10px 0px 10px 0px;
+            font-size: 30px;
+            color: black;
+            background: blueviolet;
+            border: 1px solid;
+        }
+    </style>
+    <script type="text/javascript">
+        function designate(a) {
+            forms.display.value = forms.display.value + a;
+        }
+        function del() {
+            var war = forms.display.value;
+            forms.display.value = war.substring(0, war.length - 1);
+        }
+        function ac() {
+            forms.display.value = "";
+        }
+        function equal() {
+            forms.display.value = eval(forms.display.value);
+        }
+        function sqrt() {
+            var qwerty = forms.display.value;
+            var store = Math.sqrt(qwerty);
+            forms.display.value = store;
+        }
+        function per() {
+            var percentage = forms.display.value;
+            var temp = eval(percentage);
+            var anpercent = temp * 100 + "%";
+            forms.display.value = anpercent;
+        }
+        function fact() {
+            var n = forms.display.value;
+            let answer = 1;
+            if (n == 0 || n == 1) {
+                answer = 1;
+            } else {
+                for (var i = n; i >= 1; i--) {
+                    answer = answer * i;
+                }
+            }
+            forms.display.value = answer;
+        }
+        function rad() {
+            var radian = forms.display.value;
+            var radia = (radian * 180) / 3.14;
+            forms.display.value = radia;
+        }
+        function square() {
+            var squared = forms.display.value;
+            var redeeemd = Math.pow(squared, 2);
+            forms.display.value = redeeemd;
+        }
+        function logarithm() {
+            var logarit = forms.display.value;
+            var legit = Math.log10(logarit);
+            forms.display.value = legit;
+        }
+        function lan() {
+            var logarit = forms.display.value;
+            var legit = Math.log(logarit);
+            forms.display.value = legit;
+        }
+        function pi() {
+            var pai = forms.display.value;
+            var paai = pai * 3.14;
+            forms.display.value = paai;
+        }
+        function sine() {
+            var trignometry = forms.display.value;
+            var result = Math.sin(trignometry);
+            forms.display.value = result;
+        }
+        function cos() {
+            var trignometry = forms.display.value;
+            var result = Math.cos(trignometry);
+            forms.display.value = result;
+        }
+        function tan() {
+            var trignometry = forms.display.value;
+            var result = Math.tan(trignometry);
+            forms.display.value = result;
+        }
+    </script>
+</head>
+<!--<div class="title">
+    Scientific Calculator using HTML CSS and JS
+</div>-->
+
+<body>
+    <div class="center">
+
+        <form name="forms" class="for">
+            <input type="text" name="display">
+            <div class="buttons">
+                <input type="button" value="9" onclick="designate('9')">
+                <input type="button" value="8" onclick="designate('8')">
+                <input type="button" value="7" onclick="designate('7')">
+                <input type="button" value="DEL" onclick="del()">
+                <input type="button" value="AC" onclick="ac()"><br>
+                <input type="button" value="6" onclick="designate('6')">
+                <input type="button" value="5" onclick="designate('5')">
+                <input type="button" value="4" onclick="designate('4')">
+                <input type="button" value="-" onclick="designate('-')">
+                <input type="button" value="+" onclick="designate('+')"><br>
+                <input type="button" value="3" onclick="designate('3')">
+                <input type="button" value="2" onclick="designate('2')">
+                <input type="button" value="1" onclick="designate('1')">
+                <input type="button" value="*" onclick="designate('*')">
+                <input type="button" value="/" onclick="designate('/')"><br>
+                <input type="button" value="." onclick="designate('0')">
+                <input type="button" value="0" onclick="designate('.')">
+                <input type="button" value="(" onclick="designate('(')">
+                <input type="button" value=")" onclick="designate(')')">
+                <input type="button" value="&#8730;" onclick="sqrt()"><br>
+                <input type="button" value="%" onclick="per()">
+                <input type="button" value="x!" onclick="fact()">
+                <input type="button" value="rad" onclick="rad()">
+                <input type="button" value="x&#178;" onclick="square()">
+                <input type="button" value="log" onclick="logarithm()"><br>
+                <input type="button" value="ln" onclick="lan()">
+                <input type="button" value="pi" onclick="pi()">
+                <input type="button" value="sin" onclick="sine()">
+                <input type="button" value="cos" onclick="cos()">
+                <input type="button" value="tan" onclick="tan()"><br>
+                <!--<input type="button" value="0" onclick="designate('0')">-->
+                <input type="button" value="=" onclick="equal()">
+
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
